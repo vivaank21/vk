@@ -1,0 +1,152 @@
+/* Existing Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background:  
+                url("https://img.freepik.com/free-vector/flat-design-mountain-range-silhouette_23-2150491877.jpg?w=1380&t=st=1727360451~exp=1727361051~hmac=507c565341babc5f96d7d1bf773abe806ba7f14c9635a15c45657cd86d930f2f") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-box {
+    display: flex;
+    width: 100%;
+    position: relative;
+    transition: transform 0.6s ease; /* Ensure smooth transition */
+    box-shadow: 0 10px 20px #000000;
+}
+
+.form-content {
+    padding: 2rem;
+    flex: 1;
+    transition: transform 0.6s ease; /* Add transition for smooth movement */
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-box label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    transition: 0.3s;
+    color: #999;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: -15px;
+    left: 10px;
+    font-size: 12px;
+    color: #6a11cb;
+}
+
+.input-box i {
+    position: absolute;
+    left: 300px;
+    top: 10px;
+    color: #999;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6a11cb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2575fc;
+    transform: translateY(-2px);
+}
+
+/* Updated form-image with background */
+.form-image {
+    position: relative; /* Ensure this container can hold the overlay */
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    /*background: url('https://files.oaiusercontent.com/file-I1KcHtc45Hdb9f3U13PcXzbm?se=2024-09-24T18%3A19%3A07Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D095cef14-e081-412d-bfe2-39072d752984.webp&sig=jTtRSDXrdKy1L7QJS06N3r7C0VzYvLAqpvXQ7R9aeMQ%3D') no-repeat center center/cover;*/
+    flex: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    transition: transform 0.9s ease; /* Ensure smooth transition */
+}
+
+.form-image::before {
+    content: ''; /* Create an overlay */
+    position: absolute; /* Position it absolutely within the form-image */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+    z-index: 0; /* Set below text */
+}
+
+.form-image > * {
+    position: relative; /* Ensure text stays above overlay */
+    z-index: 1; /* Bring text above the overlay */
+}
+
+.form-image h2 {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+}
+
+.form-image p {
+    font-size: 16px;
+}
+
+/* Hover effect on form box for smoother transition */
+.form-box:hover .form-content {
+    transform: translateX(40%); /* Move content to the left */
+}
+
+.form-box:hover .form-image {
+    transform: translateX(70%); /* Move image */
+}

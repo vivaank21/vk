@@ -1,0 +1,187 @@
+/* author: Stefan C.
+https://codepen.io/stefcharle/pen/Gydvbx */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Navigation Bar */
+.navbar {
+  width: 100%;
+  background: linear-gradient(to right, #000000, #6A6A6A 50%, #000000); /* Gradient background with black and silver */
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding-right: 20px;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #C00000;
+}
+
+.nav-links a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #C00000;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Gallery Container */
+.container {
+  padding: 75px 0;
+  margin: 0 auto;
+  width: 1140px;
+  background: linear-gradient(to right, #f0f0f0, #e0e0e0); /* Gradient background for a professional look */
+  border-radius: 10px; /* Optional: Add border radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+}
+
+h1 {
+  position: relative;
+  margin-bottom: 45px;
+  font-family: "Oswald", sans-serif;
+  font-size: 44px;
+  text-transform: uppercase;
+  color: #FF1801;
+}
+
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+}
+
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+}
+.item:hover {
+  flex: 7;
+  transform: transform 0.3s ease;
+}
+
+.item-1 {
+  background-image: url("https://media.formula1.com/image/upload/f_auto,c_limit,q_75,w_1320/content/dam/fom-website/drivers/2024Drivers/hamilton");
+}
+
+.item-2 {
+  background-image: url("https://imgs.search.brave.com/825Dt-vKTPanawdI80c4aAcxbN1hDUYUvl2hHZsvacU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDYzNjA0/NzUuanBn");
+}
+
+.item-3 {
+  background-image: url("https://imgs.search.brave.com/0fKSVB5mZippr_PkWKwxrHWea9Uqu1G8a7oUeHjxgL8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy85/Lzk3L0Fsb25zby02/OF8oMjQ3MTA0NDcw/OTgpLmpwZw");
+}
+
+.item-4 {
+  background-image: url("https://media.gettyimages.com/id/2158859988/photo/f1-grand-prix-of-spain.jpg?s=2048x2048&w=gi&k=20&c=cLHkY26a2JD7K5U7VMmZme_r03E73UH_gN4h80hZ89k=");
+}
+
+.item-5 {
+  background-image: url("https://imgs.search.brave.com/SwOoaL6x0MaN0oPs5LBTJKipz5GlUganBhH6H5MW1Tg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/My5tb3RvcnNwb3J0/LmNvbS9pbWFnZXMv/bWdsLzJkMVpEazVZ/L3M4MDAvZGFuaWVs/LXJpY2NpYXJkby1y/YWNpbmctYnVsbHMu/anBn");
+}
+
+.item-6 {
+  background-image: url("https://media.gettyimages.com/id/1471424039/photo/f1-grand-prix-of-bahrain.jpg?s=2048x2048&w=gi&k=20&c=dUdK6Hgp7EEAYHXmlvr0Tz3YGEh_Rfh8BP2oYDe01c8=");
+}
+
+.item-7 {
+  background-image: url("https://media.gettyimages.com/id/2028181537/photo/formula-1-testing-in-bahrain-drivers-photocall.jpg?s=2048x2048&w=gi&k=20&c=D1DBVdldF6R6tH9AFXitD6vi5kUlJ0Ii8zhjTXgqjxs=");
+}
+
+/* Link Container Styles */
+.link-container {
+  text-align: center;
+  margin: 40px 0; /* Increased margin for better spacing */
+}
+
+.link-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px; /* Space between text and button */
+}
+
+
+/* From Uiverse.io by barisdogansutcu */ 
+button {
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #7e97b8;
+  background-color: #e0e8ef;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: rgba(255, 255, 255, 0.333);
+  border-radius: 40px 40px 40px 40px;
+  padding: 16px 24px 16px 28px;
+  transform: translate(0px, 0px) rotate(0deg);
+  transition: 0.2s;
+  box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+  text-decoration: none; /* Remove underline from link */
+ }
+ 
+ button:hover {
+  color: #516d91;
+  background-color: #E5EDF5;
+  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+ }
+ 
+ button:active {
+  box-shadow: none;
+ }
+
+ button svg {
+  margin-right: 8px; /* Space between icon and text */
+}

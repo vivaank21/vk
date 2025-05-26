@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my Website</title>
+    <link rel="stylesheet" href="Homepagestyle.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">F1 Velocity Hub</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallerypage.html">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="welcome-container">
+        <div class="overlay">
+            <div class="welcome-content">
+                <h1>Welcome to the Ultimate F1 and Car Enthusiast Hub!</h1>
+                <p>Your journey starts here. Access your account and explore more.</p>
+                <a href="login2.html">
+                    <button class="custom-btn">Log In</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Cards Section -->
+    <div class="feature-container">
+        <div class="feature-card" onclick="redirectTo('f1-information.html')">
+            <h3>F1 Racing</h3>
+            <p>Click to view about F1.</p>
+        </div>
+        <div class="feature-card" onclick="redirectTo('cars.html')">
+            <h3>Cars</h3>
+            <p>Explore various car models.</p>
+        </div>
+        <div class="feature-card" onclick="redirectTo('other-racing-events.html')">
+            <h3>Other Racing Events</h3>
+            <p>Learn about NASCAR and rally racing.</p>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div class="about-me">
+        <h3>About Me</h3>
+        <p>Created by <span class="about-name">Aditya Jod</span></p>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/aditya-jod-8018232aa" target="_blank" class="about-link">LinkedIn</a></p>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 MyWebsite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

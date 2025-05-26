@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+}
+
+.container {
+    position: relative;
+    background-color: white; /* White background for the container */
+    width: 850px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.form-box {
+    display: flex;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-content {
+    flex: 1;
+    padding: 50px;
+    background-color: transparent; /* Keep form content transparent */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.6s ease;
+    position: relative; /* Ensure content appears above overlay */
+    z-index: 1; /* Bring content above the overlay */
+}
+
+.form-image {
+    flex: 1;
+    background: url('https://images.unsplash.com/photo-1626427223333-183395267453?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover; /* Replace with your side image */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    transition: transform 0.6s ease;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-box i {
+    position: absolute;
+    left: 15px; /* Changed to left */
+    top: 40px;
+    font-size: 20px;
+    color: #888;
+}
+
+.input-box input:focus {
+    border-color: #6e45e2;
+    box-shadow: 0 0 8px rgba(110, 69, 226, 0.3);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6e45e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #583bb0;
+}
+
+p a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Improved Hover and Slide Effect */
+.form-box:hover .form-content {
+    transform: translateX(30%);
+}
+
+.form-box:hover .form-image {
+    transform: translateX(80%);
+}
+
